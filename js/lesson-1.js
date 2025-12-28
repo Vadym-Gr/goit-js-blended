@@ -136,12 +136,65 @@ if (login === 'Адмін') {
 
 // Task-6
 
+// Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
+
+console.log("Task - 6");
+
+let i = 0;
+
+while (i <= 20) {
+  console.log(i);
+  i++;
+}
 
 // Task-7
 
+// Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
+// мінімальне і максимальне число відповідно.
+// Напишіть цикл всередині функції, який виводить у консоль
+// всі числа від max до min за спаданням.
+// Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
+// і поверніть її з функції.
+
+console.log("Task - 7");
+
+function getNumbers(min, max) {
+    let sum = 0;
+
+    for (let i = max; i >= min; i--) {
+        console.log(i);
+
+        if (i % 2 === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+console.log(getNumbers(2, 15));
+console.log(getNumbers(3, 9));
+console.log(getNumbers(1, 20));
 
 // Task-8
 
+// Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
+// Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
+// повертати з функції рядок - 'Not a number!'.
+
+console.log("Task - 8");
+
+function min(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    return 'Not a number!';
+  }
+
+  return a < b ? a : b;
+}
+
+console.log(min(5, 12));
+console.log(min('5', 12));
+console.log(min(10, 7));
+console.log(min(15, '1'));
 
 // Task-9
 
