@@ -1,6 +1,5 @@
 // Task-1
 
-
 // Запропонуйте користувачу ввести число за допомогою prompt().
 // Збережіть введене значення у змінну number.
 // Перевірте, чи дорівнює змінна number числу 10:
@@ -32,16 +31,16 @@ if (number === 10) {
 
 console.log("Task - 2");
 
-const min = Math.floor(Math.random() * 59);
+const randomMin = Math.floor(Math.random() * 59);
 
-if (min >= 0 && min <= 14) {
-  alert(`${min} входить в першу чверть`);
-} else if (min >= 15 && min <= 29) {
-  alert(`${min} входить в другу чверть`);
-} else if (min >= 30 && min <= 44) {
-  alert(`${min} входить в третю чверть`);
+if (randomMin >= 0 && randomMin <= 14) {
+  alert(`${randomMin} входить в першу чверть`);
+} else if (randomMin >= 15 && randomMin <= 29) {
+  alert(`${randomMin} входить в другу чверть`);
+} else if (randomMin >= 30 && randomMin <= 44) {
+  alert(`${randomMin} входить в третю чверть`);
 } else {
-  alert(`${min} входить в четверту чверть`);
+  alert(`${randomMin} входить в четверту чверть`);
 }
 
 // Task-3
@@ -198,6 +197,45 @@ console.log(min(15, '1'));
 
 // Task-9
 
+// Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
+// якщо параметр age більше чи дорівнює 18.
+// В іншому випадку вона запитує підтвердження через confirm
+// і повертає його результат (true/false).
+
+console.log("Task - 9");
+
+function isAdult(age) {
+    if (age >= 18) {
+        return true;
+    } else {
+        return confirm('Вам менше 18 років. Продовжити?');
+    }
+}
+
+console.log(isAdult(16));
+console.log(isAdult(21));
 
 // Task-10
 
+// Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+console.log("Task - 10");
+
+function fizzBuzz(num) {
+    for (let i = 1; i <= num; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('fizzbuzz');
+        } else if (i % 3 === 0) {
+            console.log('fizz');
+        } else if (i % 5 === 0) {
+            console.log('buzz');
+        } else {
+            console.log(i);
+        }              
+    }
+}
+
+fizzBuzz(15);
